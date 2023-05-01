@@ -33,3 +33,16 @@ describe('Clicking "Pusha till stacken"', () => {
 		await alert.accept();
 	});
 });
+
+// my test #2 - failing on purpose since ("Dackefejden 1542" != "Nisse")
+test('The stack-span should update to display the last pushed element', async () => {
+    let push = await driver.findElement(By.id('push'));
+    await push.click();
+
+    let alert = await driver.switchTo().alert();
+    await alert.sendKeys("Dackefejden 1542");
+    await alert.accept();
+
+	let stack = await driver.findElement(By.id('top_of_stack')).getText(); // should display new stack item by now
+	expect(stack).toEqual("Nisse"); // should fail, obviously
+});

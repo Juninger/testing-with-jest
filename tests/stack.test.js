@@ -17,3 +17,15 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBeDefined();
     expect(stack.peek()).toBe(42);
 });
+
+// my test #1 - failing on purpose since (1542 != 'Dackefejden') technically
+test('pop on stack returns top element', () => {
+    stack.push(1);
+    stack.push("Hej");
+    stack.push(12345);    
+    stack.push("Five");
+    stack.push("Dog");
+    stack.push(1542);
+    expect(stack.peek()).toBeDefined();
+    expect(stack.pop()).toBe('Dackefejden'); //should fail, obviously
+})
