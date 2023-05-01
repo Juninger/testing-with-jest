@@ -1,0 +1,22 @@
+{
+  "name": "testing-with-jest",
+  "version": "1.0.0",
+  "description": "A lab session with Jest and NPM",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juninger/testing-with-jest.git"
+  },
+  "author": "Juninger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juninger/testing-with-jest/issues"
+  },
+  "homepage": "https://github.com/Juninger/testing-with-jest#readme"
+}
